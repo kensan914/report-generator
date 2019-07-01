@@ -1,0 +1,4 @@
+module reportGeneratorModule {
+    requires javafx.controls;
+    opens reportGeneratorApp to javafx.graphics;
+}
