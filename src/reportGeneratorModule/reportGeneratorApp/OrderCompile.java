@@ -3,6 +3,13 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.security.CodeSource;
+import java.security.ProtectionDomain;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -12,6 +19,14 @@ public class OrderCompile {
 
 		String path = System.getProperty("user.dir");
 		String compileText = "";
+
+		//パステスト
+		Path pathtest=null;
+		try {
+			pathtest = getApplicationPath(OrderCompile.class);
+		} catch (URISyntaxException e1) {
+			e1.printStackTrace();
+		}
 
 		List<String> cmdCpl = new ArrayList<String>(Arrays.asList("script","-q","compile.log","gcc", sourceFilePath, "-o", path+"/a.out"));
 		List<String> cmdRm = new ArrayList<String>(Arrays.asList("rm",path+"/compile.log"));
@@ -41,5 +56,14 @@ public class OrderCompile {
             compileText = "Erroer by Application";
         	return compileText;
         }
+	}
+
+	public static Path getApplicationPath(Class<?> cls) throws URISyntaxException {
+		ProtectionDomain pd = cls.getProtectionDomain();
+		CodeSource cs = pd.getCodeSource();
+		URL location = cs.getLocation();
+		URI uri = location.toURI();
+		Path path = Paths.get(uri);
+		return path;
 	}
 }

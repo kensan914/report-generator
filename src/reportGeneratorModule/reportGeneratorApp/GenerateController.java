@@ -230,7 +230,7 @@ public class GenerateController {
 		if(alrtClear) {
 			for(int i=0;i<pathList.size();i++) {
 				compileText = OrderCompile.compile(pathList.get(i));
-				System.out.println(compileText);//テスト用
+				//System.out.println(compileText);//テスト用
 				reportText = GenerateReport.generateReport(pathList.get(i), kadaiNumList.get(i).getText(), claList.get(i).getText());
 				if(compileText.equals("")) {
 					reportTextList.add(reportText);

@@ -16,7 +16,6 @@ public class GenerateReport {
 		String reportText = "", resultText = "", sourceText = "";
 		String[] claTexts = claText.split(" ");
 		String path = System.getProperty("user.dir");
-		System.out.println(path);//テスト用
 
 		try {
 			File shFile = new File(path + "/cla.sh");
@@ -38,7 +37,7 @@ public class GenerateReport {
 	    }
 
 		List<String> cmdChmod = new ArrayList<String>(Arrays.asList("chmod","+x",path+"/cla.sh"));
-		List<String> cmdExcution = new ArrayList<String>(Arrays.asList("open","-W","-a","terminal",path+"/cla.sh"));
+		List<String> cmdExcution = new ArrayList<String>(Arrays.asList("open","-n","-W","-a","terminal",path+"/cla.sh"));
 		List<String> cmdCat = new ArrayList<String>(Arrays.asList("cat",sourceFilePath));
 		List<String> cmdRm = new ArrayList<String>(Arrays.asList("rm",path+"/output.log"));
 
