@@ -1,0 +1,10 @@
+ReportGenerator_forMac、ReportGenerator_forWinはともにJREを含んだ自己完結型アプリのパッケージです。
+これらを配布することにより実行するPCの環境に依存せずにアプリが動く(と思われます)。
+
+・実行方法
+(Windows)
+ReportGenerator_forWin\bin\reportGenerator.batをダブルクリック
+※コマンドスクリプトでbashが使える、かつbash内でgccが使える環境が必要。
+
+(Mac)
+ReportGenerator_forMac/bin/reportGeneratorをダブルクリック
