@@ -63,7 +63,6 @@ public class GenerateReport {
             	count++;
             }
             logList.remove(count);
-            logList.remove(count-1);
             logList.remove(0);
             for(int i=0;i<logList.size();i++) {
             	resultText += logList.get(i);
