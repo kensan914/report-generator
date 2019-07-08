@@ -5,6 +5,7 @@ ReportGenerator_forMac、ReportGenerator_forWinはともにJREを含んだ自己
 (Windows)
 ReportGenerator_forWin\bin\reportGenerator.batをダブルクリック
 ※コマンドスクリプトでbashが使える、かつbash内でgccが使える環境が必要。
+※コマンドプロンプトの文字コードをUTF-8に設定する必要がある(デフォルトはUTF-8)。
 
 (Mac)
 ReportGenerator_forMac/bin/reportGeneratorをダブルクリック
