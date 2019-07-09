@@ -20,7 +20,7 @@ public class Controller {
 	    }
 	 @FXML
 	    public void changeFromW0ToRU(ActionEvent e) {
-		 	List<String> cmdOpen = new ArrayList<String>(Arrays.asList("cmd","/c","start","http://172.21.33.61/login"));
+		 	List<String> cmdOpen = new ArrayList<String>(Arrays.asList("cmd","/c","start","http://172.21.33.67/login"));
 		 	ProcessBuilder pb = new ProcessBuilder(cmdOpen);
 		 	Process p;
 			try {
